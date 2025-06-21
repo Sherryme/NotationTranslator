@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png">
+    <title>简谱转换器</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="title">简谱转换器</h1>
+        <div class="block">
+            <div class="block__row">
+                <div class="block__input-system">
+                    <div class="dropdown" id="dropdown-input">
+                        <div class="select">
+                            <span class="selected">字母</span>
+                            <img src="img/tick.svg" alt="not found" class="tick">
+                        </div>
+                        <ul class="menu">
+                            <li id="bin">数字</li>
+                            <li class="active" id="dec">字母</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div data-title="Swap systems" class="block__images">
+                    <button class="block__button" id="button-reverse">
+                        <img src="img/arrow.svg" alt="not found">
+                        <img src="img/arrow.svg" alt="not found">
+                    </button>
+                </div> -->
+                <div class="block__output-system">
+                    <div class="dropdown" id="dropdown-output">
+                        <div class="select">
+                            <span class="selected">数字</span>
+                            <img src="img/tick.svg" alt="not found" class="tick">
+                        </div>
+                        <ul class="menu">
+                            <li class="active">数字</li>
+                            <li>字母</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="block__columns">                            
+                <textarea type="text" placeholder="输入你想转换的字母简谱，目前仅支持C大调。" type="text" id="input">CDEFGAB</textarea>
+                <div class="block__row-midl">
+                    <button class="button-interpret-adaptive">Convert</button>
+                </div>
+                <textarea type="text" id="output" readonly></textarea>
+            </div>
+        </div>
+        <button class="button-interpret" id="confirmBtn" onclick="translateFun()">转换</button>
+        <button class="button-interpret" onclick="clearFun()">清除</button>
+
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>
