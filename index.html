@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +16,12 @@
                 <div class="block__input-system">
                     <div class="dropdown" id="dropdown-input">
                         <div class="select">
-                            <span class="selected">字母</span>
-                            <img src="img/tick.svg" alt="not found" class="tick">
+                            <span class="selected">音名 (字母)</span>
+                            <!-- <img src="img/tick.svg" alt="not found" class="tick"> -->
                         </div>
                         <ul class="menu">
                             <li id="bin">数字</li>
-                            <li class="active" id="dec">字母</li>
+                            <li class="active" id="dec">音名 (字母)</li>
                         </ul>
                     </div>
                 </div>
@@ -35,17 +35,17 @@
                     <div class="dropdown" id="dropdown-output">
                         <div class="select">
                             <span class="selected">数字</span>
-                            <img src="img/tick.svg" alt="not found" class="tick">
+                            <!-- <img src="img/tick.svg" alt="not found" class="tick"> -->
                         </div>
                         <ul class="menu">
                             <li class="active">数字</li>
-                            <li>字母</li>
+                            <li>音名 (字母)</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="block__columns">                            
-                <textarea type="text" placeholder="输入你想转换的字母简谱，目前仅支持C大调。" type="text" id="input">CDEFGAB</textarea>
+                <textarea type="text" placeholder="输入你想转换为简谱的音名谱。" type="text" id="input">CDEFGAB</textarea>
                 <div class="block__row-midl">
                     <button class="button-interpret-adaptive">Convert</button>
                 </div>
@@ -54,8 +54,10 @@
         </div>
         <button class="button-interpret" id="confirmBtn" onclick="translateFun()">转换</button>
         <button class="button-interpret" onclick="clearFun()">清除</button>
-
+        <br>
+        <p id="footer">© 2025 <a href="https://github.com/sherryme">Sherryme</a></p>
     </div>
 <script src="js/script.js"></script>
+
 </body>
 </html>
